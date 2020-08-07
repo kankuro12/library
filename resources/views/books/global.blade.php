@@ -10,13 +10,17 @@
   <div class="index-title mb-2">
 
     <form action="" method="get">
-      <table class="search_tab mb-2 w-100">
-        <tr>
-          <td class="w-25"><input type="text" name="keywords" class="form-control" placeholder="Title"></td>
-          <td class="w-25"><input type="text" name="author" class="form-control" placeholder="Author"></td>
-          <td class="w-25"><button type="submit" class="fa fa-search form-control">Search</td>
-        </tr>
-      </table>
+      <div class="row">
+        <div class="col-md-4 p-3">
+          <input type="text" name="keywords" class="form-control" placeholder="Title">
+        </div>
+        <div class="col-md-4 p-3">
+          <input type="text" name="author" class="form-control" placeholder="Author">
+        </div>
+        <div class="col-md-4 p-3">
+          <button type="submit" class="fa fa-search form-control">Search</button>
+        </div>
+      </div>
     </form>
   </div>
   <div class="mt-3">
