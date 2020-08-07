@@ -43,9 +43,13 @@ Artisan::command('data', function () {
 });
 
 
-Artisan::command('user {pass}', function ($pass) {
+Artisan::command('user {pass} {email}', function ($pass, $email) {
     $user = new \App\Models\User();
-    $user->email = "cms111000111@gmail.com";
+    if ($email == null) {
+        $user->email = "cms111000111@gmail.com";
+    } else {
+        $user->email = $email;
+    }
     $user->name = "chhatraman shrestha";
     $user->password = Hash::make($pass);
     $user->phone = "9800916365";
