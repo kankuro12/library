@@ -45,7 +45,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => public_path(),
+            'root' => __DIR__,
             'url' => env('APP_URL') . '/public',
             'visibility' => 'public',
         ],
