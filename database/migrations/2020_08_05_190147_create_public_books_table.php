@@ -16,9 +16,9 @@ class CreatePublicBooksTable extends Migration
         Schema::create('public_books', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('uid');
-            $table->string('title');
-            $table->string('author');
-            $table->string('photo');
+            $table->text('title');
+            $table->text('author');
+            $table->text('photo');
             $table->timestamps();
         });
     }
