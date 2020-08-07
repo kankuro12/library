@@ -21,7 +21,8 @@
     <div class="card-body">
       @include('shared._errors')
 
-      <form method="POST" action="{{ route('newapplication') }}" enctype="multipart/form-data">
+      <form onsubmit="return Validate();" method="POST" action="{{ route('newapplication') }}"
+        enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="row">
           <div class="col-md-6">
@@ -48,10 +49,24 @@
             </div>
           </div>
           <div class="col-md-6">
-
             <div class="form-group pt-1">
               <label for="id">Email </label>
               <input type="email" name="email" class="form-control" value="{{ old('email') }}">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+
+            <div class="form-group pt-1">
+              <label for="password">Password </label>
+              <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group pt-1">
+              <label for="repass">Retype Password </label>
+              <input type="password" id="repass" name="repass" class="form-control">
             </div>
           </div>
         </div>
@@ -77,4 +92,15 @@
     </div>
   </div>
 </div>
-@stop
+<script>
+  function Validate() {
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("repass").value;
+  if (password != confirmPassword) {
+  alert("Passwords do not match.");
+  return false;
+  }
+  return true;
+  }
+</script>
+@endsection

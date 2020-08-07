@@ -21,7 +21,7 @@ Artisan::command('data', function () {
     $files = scandir(__DIR__ . '/../data/');
     for ($i = 2; $i < count($files); $i++) {
         $d = file_get_contents(__DIR__ . '/../data/' . $files[$i]);
-        echo "reading " . __DIR__ . '/../data/' . $files[$i] + "\n";
+        echo "reading " . __DIR__ . '/../data/' . $files[$i] . "\n";
         $r = json_decode($d);
         foreach ($r as $value) {
             $n = new \App\Models\PublicBook();
@@ -38,14 +38,15 @@ Artisan::command('data', function () {
                 $l->save();
             }
         }
-        echo  __DIR__ . '/../data/' . $files[$i] + "Published\n";
+        echo  __DIR__ . '/../data/' . $files[$i] . "Published\n";
     }
 });
 
 
 Artisan::command('user {pass}', function ($pass) {
-    $user = \App\Models\User();
+    $user = new \App\Models\User();
     $user->email = "cms111000111@gmail.com";
+    $user->name = "chhatraman shrestha";
     $user->password = Hash::make($pass);
     $user->phone = "9800916365";
     $user->address = "Munalpath";
