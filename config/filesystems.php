@@ -43,9 +43,15 @@ return [
 
     'disks' => [
 
+        'root' => [
+            'driver' => 'local',
+            'root' => $_SERVER['DOCUMENT_ROOT'],
+            'url' => env('APP_URL') . '/public',
+            'visibility' => 'public',
+        ],
         'local' => [
             'driver' => 'local',
-            'root' => __DIR__,
+            'root' => public_path(),
             'url' => env('APP_URL') . '/public',
             'visibility' => 'public',
         ],
