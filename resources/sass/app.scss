@@ -1,0 +1,145 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// font-awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/v4-shims.scss";
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url('https://oss.macrohard.cn/fonts/Roboto-Thin.ttf');
+}
+
+body {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Roboto-Thin';
+    background-image: url(https://oss.macrohard.cn/img/gallery/amazing-landscape-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+nav.navbar.navbar-expand-lg {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  font-size: 13px;
+  font-weight: bold;
+  a {
+    color: #555;
+  }
+  a:hover {
+    color: #222;
+  }
+  img.brand-icon {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+section.user_info {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;
+  .gravatar {
+    float: none;
+    max-width: 70px;
+  }
+  h1 {
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 15px;
+  }
+}
+
+.gravatar {
+  float: left;
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.gravatar_edit {
+  margin: 15px auto;
+  text-align: center;
+  .gravatar {
+    float: none;
+    max-width: 100px;
+  }
+}
+
+.logo {
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.welcome {
+  &:hover {
+    opacity: 0.7;
+  }
+  color: #ffff00;
+  margin-top: 50px;
+  opacity: 0.75;
+  background: linear-gradient(to right, #3399CC, #00CCFF);
+  border-style: none;
+  border-width: 2px;
+  border-color: white;
+}
+
+.title {
+  text-shadow: 5px 5px 5px #333333;
+  text-align: center;
+}
+
+.update-btn {
+  margin-right: 10px;
+}
+
+.create-btn {
+  margin-right: 20px;
+}
+
+.index-title {
+  margin-top: 30px;
+  display: flex;
+}
+
+.index-list {
+  border-style: solid;
+  border-width: 2px;
+  border-color: gray;
+}
+
+.info-list {
+  margin-top: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: gray;
+}
+
+.pay-btn {
+  min-width: 100%;
+  text-align: left;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+table {
+  font-size: 12px;
+}
