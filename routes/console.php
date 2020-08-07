@@ -44,6 +44,7 @@ Artisan::command('data', function () {
 
 
 Artisan::command('user {pass} {email}', function ($pass, $email) {
+
     $user = new \App\Models\User();
     if ($email == null) {
         $user->email = "cms111000111@gmail.com";

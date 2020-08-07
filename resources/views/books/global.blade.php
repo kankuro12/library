@@ -30,7 +30,7 @@
           <div class="card-body">
             <p class="card-title text-center font-weight-bold">
               {{$book->title}} <br />
-              <a href="{{url('public?author='.$book->author)}}'">By {{$book->author}}</a>
+              <a href="{{url('public?author='.str_replace(" ","+", $book->author))}}'">By {{$book->author}}</a>
             </p>
           </div>
           <div class="d-flex flex-row">

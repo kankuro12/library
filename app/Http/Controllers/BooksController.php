@@ -36,8 +36,11 @@ class BooksController extends Controller
     public function public(Request $request)
     {
         $books = DB::table('public_books');
-        if ($request->input('author'))
+        if ($request->input('author')) {
+            dd($_GET['author']);
             $books = $books->where('author', 'like', '%' . $_GET['author'] . '%');
+        }
+
         if ($request->input('keywords'))
             $books = $books->where('title', 'like', '%' . $_GET['keywords'] . '%');
         $books = $books->paginate(12);
