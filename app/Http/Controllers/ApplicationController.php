@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class ApplicationController extends Controller
 {
+
     public function add()
     {
         return view('users.newapplication');
