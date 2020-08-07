@@ -37,7 +37,7 @@ class BooksController extends Controller
     {
         $books = DB::table('public_books');
         if ($request->input('author')) {
-            dd($_GET['author']);
+            // dd($_GET['author']);
             $books = $books->where('author', 'like', '%' . $_GET['author'] . '%');
         }
 
