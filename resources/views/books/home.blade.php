@@ -11,11 +11,11 @@
 
     <form action="" method="get">
       <div class="row">
-        <div class="col-md-3 p-3">
+        <div class="col-md-3 p-1">
           <input type="text" name="keywords" class="form-control" placeholder="Title">
 
         </div>
-        <div class="col-md-3 p-3">
+        <div class="col-md-3 p-1">
           <select name="category" class="form-control">
             <option value="">All categories</option>
             @foreach(App\Models\Category::all() as $category)
@@ -23,10 +23,10 @@
             @endforeach
           </select>
         </div>
-        <div class="col-md-3 p-3">
+        <div class="col-md-3 p-1">
           <input type="text" name="author" class="form-control" placeholder="Author">
         </div>
-        <div class="col-md-3 p-3">
+        <div class="col-md-3 p-1">
           <button type="submit" class="fa fa-search form-control">Search</button>
 
         </div>
