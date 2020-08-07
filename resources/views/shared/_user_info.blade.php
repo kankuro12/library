@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-md-3">
     <a href="{{ route('users.show', $user->id) }}" class="w-100">
-      <img src="{{asset($user->photo)}}" alt="{{ $user->name }}" class="img-fluid" />
+      <img src="{{$user->photo==null?$user->gravatar():asset($user->photo)}}" alt="{{ $user->name }}"
+        class="img-fluid" />
     </a>
   </div>
   <div class="col-md-9">
