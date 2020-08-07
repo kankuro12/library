@@ -22,7 +22,7 @@ class ApplicationController extends Controller
         $user->phone = $request->phone;
         $user->address = $request->address;
         $user->description = $request->description;
-        $user->password = Hash::make("admin123");
+        $user->password = Hash::make($request->password ?? "admin123");
         if ($request->hasFile("photo")) {
             $user->photo = $request->file('photo')->store('photos');
         }
