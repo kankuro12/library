@@ -64,7 +64,7 @@
     </div>
   </div>
 
-  <div class="mt-3 d-flex justify-content-end">
+  <div class="mt-3 d-flex justify-content-center">
     <span>
 
       {!! $books->links() !!}
