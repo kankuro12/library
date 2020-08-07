@@ -29,7 +29,7 @@ class BooksController extends Controller
             $books = $books->where('name', 'like', '%' . $_GET['keywords'] . '%');
         $books = $books->paginate(12);
         // dd($books);
-        return view('books.Home', compact('books'));
+        return view('books.home', compact('books'));
     }
 
 
